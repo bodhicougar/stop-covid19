@@ -1,7 +1,11 @@
 require('dotenv').config()
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://stop-covid19-2020.netlify.com/`,
+  },
   plugins: [
+    `gatsby-plugin-sitemap`,
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
