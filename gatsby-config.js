@@ -5,12 +5,24 @@ module.exports = {
     siteUrl: `https://stop-covid19-2020.netlify.com/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Stop Covid 19 in 2020`,
+        short_name: `StopCorona`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
     `gatsby-plugin-sitemap`,
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-postcss`,
     'gatsby-plugin-netlify-cache',
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
