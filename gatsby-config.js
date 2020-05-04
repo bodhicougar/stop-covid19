@@ -10,6 +10,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-postcss`,
+    'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
@@ -21,7 +22,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-mathdroid-covid19',
       options: {
-        countries: require('./country-codes.json').map(countryCode => ({ iso2: countryCode })),
+        countries: require('./country-codes.json').map(countryCode => ({
+          iso2: countryCode,
+        })),
       },
     },
     {
