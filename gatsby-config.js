@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-mathdroid-covid19',
       options: {
-        countries: require('./country-codes.json').map(countryCode => ({
+        countries: require('./country-codes.json').map((countryCode) => ({
           iso2: countryCode,
         })),
       },
